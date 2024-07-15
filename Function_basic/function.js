@@ -192,6 +192,72 @@ console.log(concatenateStrings("-", "Hello", "World", "JavaScript"));
 * @param {number} b - It accept second number
 * return {number}  The sum of a and b
 */
+// Error handling example-1
+function divide(a, b){
+    if(b===0){
+       throw new Error("Division is not allowed");
+    }
+
+return a / b;
+}
+try{
+    console.log(divide(10,5));
+    console.log(divide(5,0));
+}
+catch(error){
+    console.error(error.message);
+}
+
+// Error handling example-2
+function checkEmptyString(str){
+    if(str === ''){
+        throw new Error('String is empty');
+    }
+    return 'String is not empty';
+}
+try{
+    console.log(checkEmptyString('Hello'));
+    console.log(checkEmptyString('Hello World'));
+    console.log(checkEmptyString(''));
+
+}
+catch(error){
+    console.error(error.message);
+}
+//  Error handling example-3
+function ageError(age){
+    if(age<18){
+        throw new Error ("Not eligible for the vote");
+    }
+    return "Eligible for the vote";
+}
+try{
+    console.log(ageError(20));
+    console.log(ageError(16));
+}
+catch(err){
+    console.log(err.message);
+}
+
+let numbers = [1,2,3,4,5];
+let fruits = ['mango' , 'orange' ,'water-melon'];
+let mixedArray = [12, true,'banana',{name : 'sejal'}];
+console.log(mixedArray.length);
+
+// modifying array
+numbers.push(6);
+console.log(numbers);
+numbers[3]=10;
+console.log(numbers);
+numbers.pop()
+console.log(numbers);
+
+// Accessing an array
+console.log(fruits[2]);
+console.log(numbers[4]);
+console.log(mixedArray[3]);
+
+
 
 
     
